@@ -1,7 +1,7 @@
-package lotr;
-
-public class CharacterFactory {
-    Character createCharacter(){
-
-    }
-}
+//package lotr;
+//
+//public class CharacterFactory {
+//    Character createCharacter(){
+//
+//    }
+//}
