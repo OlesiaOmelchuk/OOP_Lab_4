@@ -2,13 +2,8 @@ package lotr;
 
 import java.util.Random;
 
-public class Knight extends Character{
+public class Knight extends Noble{
     public Knight(){
-        super(new Random().nextInt(11) + 5, new Random().nextInt(11) + 5);
-    }
-
-    @Override
-    public void kick(Character c) {
-        c.setHp(c.getHp() - new Random().nextInt(getPower()+1));
+        super(2, 12);
     }
 }
