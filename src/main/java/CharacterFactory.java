@@ -1,4 +1,5 @@
 import lotr.Noble;
+import lotr.Character;
 import org.reflections.Reflections;
 
 import java.lang.reflect.InvocationTargetException;
@@ -14,7 +15,7 @@ public class CharacterFactory {
         subTypes.remove(Noble.class);
         Object[] classes = subTypes.toArray();
         int num = new Random().nextInt(classes.length);
-        Character newCharacter = (Character) classes[num].getClass().getConstructor().newInstance();
+        Character newCharacter = (Character) ((Class)classes[num]).getConstructor().newInstance();
         return newCharacter;
     }
 }

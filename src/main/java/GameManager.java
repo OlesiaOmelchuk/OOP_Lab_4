@@ -2,6 +2,8 @@ import lotr.Character;
 
 public class GameManager {
     void fight(Character c1, Character c2){
+        System.out.println("First character has " + c1.getHp() + " hp left");
+        System.out.println("Second character has " + c2.getHp() + " hp left");
         int turn = 1;
         while(true){
             if(turn == 1){
@@ -10,6 +12,7 @@ public class GameManager {
                     return;
                 }
                 c1.kick(c2);
+                System.out.println("First character attacks");
                 System.out.println("Second character has " + c2.getHp() + " hp left");
                 turn = 2;
             }else{
@@ -18,6 +21,7 @@ public class GameManager {
                     return;
                 }
                 c2.kick(c1);
+                System.out.println("Second character attacks");
                 System.out.println("First character has " + c1.getHp() + " hp left");
                 turn = 1;
             }
